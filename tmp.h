@@ -6,12 +6,12 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 05:06:12 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 05:33:22 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <stdarg.h>
 # include "hhhh/libft.h"
 #
-#define NOTEOA(chr)	((chr==NULL)==0)
+#define NOTEOA(chr)	((chr=='\0')==0)
 #define
