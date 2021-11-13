@@ -6,13 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 05:05:44 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 05:47:25 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tmp.h"
 
-int	outputAndCount(const char* format,int* printed_len, va_list ap)
+
+void	outputAndCount(const char* format,int* printed_len, va_list ap)
 {
 	char examed_chr;
 
@@ -30,5 +31,7 @@ int	outputAndCount(const char* format,int* printed_len, va_list ap)
 		}
 		format+=1;
 	}
-	return (*printed_len);
+	return (0);
 }
+
+
