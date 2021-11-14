@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 15:03:02 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:05:19 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # define LEN	data->printed_len
 # define CONVERSION_MATCHED(conv)	((data->format[data->format_i]) == ('conv')) handle_conv();
 # define CONVERSION_MATCHED_X 		(data->format[data->format_i]) == ('X') handle_X()
+# define NEXT
 
 
 

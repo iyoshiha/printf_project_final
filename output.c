@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 15:03:05 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:05:21 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	outputAndCount(t_formatData*	data)
 	{
 		if (FORMAT[INDEX] == '%')
 		{
-			INDEX++;
+			NEXT INDEX++;
 			convertAndCount(data);
 		}
 		else
