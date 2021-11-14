@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 11:33:39 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 11:35:25 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	outputAndCount(t_formatData*	data)
 		if (data->format[data->format_i] == '%')
 		{
 			data->format_i++;
-			conversionAndCount(data);
+			convertAndCount(data);
 		}
 		else
 		{
