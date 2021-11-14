@@ -6,13 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 05:50:26 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 08:09:52 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 11:33:32 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tmp.h"
 
-void	ConvertAndCount(const char* format, )
+void	ConvertAndCount(t_formatData* data)
 {
+	if ()
 
 }
