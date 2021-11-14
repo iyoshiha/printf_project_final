@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 15:44:21 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:16:20 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include "hhhh/libft.h"
 #
-#define NOTEOS(chr)	((chr=='\0')==0)
+# define NOTEOS(chr)	((chr=='\0')==0)
 # define FORMAT	data->format
 # define INDEX	data->format_i
 # define LEN_PRINTED	data->printed_len
