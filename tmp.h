@@ -6,14 +6,30 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 05:47:22 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 11:11:40 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef TMP_H
+# define TMP_H
+#
 # include <stdarg.h>
 # include "hhhh/libft.h"
 #
 #define NOTEOA(chr)	((chr=='\0')==0)
-#define
+// #define
+typedef struct	s_formatData
+{
+	const char* format;
+	int			printed_len;
+	int			format_i;
+	va_list		ap;
+}				t_formatData;
 
-void	outputAndCount(const char* format,int* printed_len, va_list ap);
+
+
+void	outputAndCount(t_formatData* data);
+
+
+
+#endif
