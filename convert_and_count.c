@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 05:50:26 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 11:33:32 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 11:47:29 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ConvertAndCount(t_formatData* data)
 {
-	if ()
+	if (CONVERSION_MATCHED('c'))
+
+
 
 }
