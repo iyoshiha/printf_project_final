@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 11:50:21 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 13:03:14 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include "hhhh/libft.h"
 #
 #define NOTEOA(chr)	((chr=='\0')==0)
-# define CONVERSION_MATCHED(conv)	(data->format[data->format_i]) == (conv)
-// #define
+# define CONVERSION_MATCHED(conv)	((data->format[data->format_i]) == ('conv')) handle_conv();
+# define CONVERSION_MATCHED_X 		(data->format[data->format_i]) == ('X') handle_X()
 typedef struct	s_formatData
 {
 	const char* format;
