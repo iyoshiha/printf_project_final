@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 11:35:25 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:03:05 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 void	outputAndCount(t_formatData*	data)
 {
-	data->format_i = 0;
-	while (NOTEOA((data->format[data->format_i])))
+	INDEX = 0;
+	while (NOTEOS((FORMAT[INDEX])))
 	{
-		if (data->format[data->format_i] == '%')
+		if (FORMAT[INDEX] == '%')
 		{
-			data->format_i++;
+			INDEX++;
 			convertAndCount(data);
 		}
 		else
 		{
-			ft_putchar_fd(data->format, STDOUT_FILENO);
-			data->printed_len++;
+			ft_putchar_fd(FORMAT, STDOUT_FILENO);
+			LEN++;
 		}
-		data->format_i++;
+		INDEX++;
 	}
 	return (0);
 }
