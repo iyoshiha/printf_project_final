@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 15:06:32 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:45:08 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	outputAndCount(t_formatData*	data)
 		else
 		{
 			ft_putchar_fd(FORMAT, STDOUT_FILENO);
-			ADD LEN++;
+			ADD LEN_PRINTED++;
 		}
 		NEXT INDEX++;
 	}
