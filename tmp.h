@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/15 21:05:52 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/16 05:55:42 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # define CONVERSION_MATCHED_X 		(data->format[data->format_i]) == ('X') handle_X()
 # define NEXT
 # define ADD
+# define LENGTH_OF_0X	2
 
 
 
