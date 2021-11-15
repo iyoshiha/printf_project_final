@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printHexBase copy.c                                :+:      :+:    :+:   */
+/*   printAddress.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:08:08 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/16 05:55:45 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/16 06:30:31 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../tmp.h"
+# include "component.h"
 
 // print number by hexadeciam base
 // return the total number of printed charactors.
@@ -32,20 +33,20 @@ int		printHexBase(long long unsigned int decimal)
 	int remainder;
 	static int count;
 
-	if (decimal == 0)	// handle deciaml =< 0;
+	if (decimal == 0)
 		return(print0());
-	if (next_digit = decimal / 16 > 0)
+	if ((next_digit = (decimal / 16)) > 0)
 		printHexBase(next_digit);
 	remainder = decimal % 16;
-	if (remainder => 10)
+	if (remainder >= 10)
 		replace_ten2a(remainder);
 	else
-		remainder += '0'
+		remainder += '0';
 	ft_putchar_fd (remainder, STDOUT_FILENO);
 	return(count++);
 }
 
-int		replace_ten2a(num)
+int		replace_ten2a(int num)
 {
 	int base;
 
@@ -56,6 +57,6 @@ int		replace_ten2a(num)
 int		print0(void)
 {
 	int		printed_num;
-	ft_putchar_fd("0", STDOUT_FILENO);
+	ft_putchar_fd('0', STDOUT_FILENO);
 	return (printed_num = 1);
 }
