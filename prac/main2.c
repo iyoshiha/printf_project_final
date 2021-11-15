@@ -3,11 +3,22 @@
 # include <stdlib.h>
 # include <string.h>
 # include "../header/libft.h"
+
+void h(void* ptr)
+{
+	printf("%p\n", ptr);
+	return ;
+}
+
 int	main(void)
 {
-	const int n[4] = {'1','\0','3'};
+	void* num;
+	long	l;
 
-	printf("%#p\n", n);
-
+	num = &num;
+	l = (long)num;  // SUCCESS: cast to long int from point type
+	printf("%lx\n", l);
+	h((num));
+	printf("hello %p\n", num);
 	return(0);
 }
