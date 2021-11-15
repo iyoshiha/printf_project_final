@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 16:16:20 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:05:52 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define TMP_H
 #
 # include <stdarg.h>
-# include "hhhh/libft.h"
+# include "header/libft.h"
 #
 # define NOTEOS(chr)	((chr=='\0')==0)
 # define FORMAT	data->format
