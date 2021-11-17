@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:08:08 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 02:24:16 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 03:44:57 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		printHexBase(long long unsigned int decimal)
 {
 	long long unsigned int	next_digit;
 	int remainder;
-	static int count;
+	static int printed_num;
 
 	if (decimal == 0)
 		return(print0());
@@ -44,7 +44,8 @@ int		printHexBase(long long unsigned int decimal)
 	else
 		remainder += '0';
 	ft_putchar_fd (remainder, STDOUT_FILENO);
-	return(count++);
+	printed_num++;
+	return(printed_num);
 }
 
 int		replace_ten2a(int num)
