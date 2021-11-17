@@ -15,9 +15,8 @@ int main()
 	i = 10;
 	ptr = &i;
 # if defined (DEBUG)
-	printf("%p\n", ptr);
-	printf("0x");
-	printf("\n%d\n",printHexBase((long long unsigned int)ptr));
+	printf("\n%d\n",printAddress(ptr));
+	printf("\n%d\n",printf("%p",(ptr)));
 # else
 	printHexBase((long long unsigned int)ptr);
 # endif
