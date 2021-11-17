@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:08:08 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/16 06:30:31 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/17 23:58:31 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		printAddress(void* ptr)
 		return(print0());
 	ft_putstr_fd("0x", STDOUT_FILENO);
 	total_num_printed =	LENGTH_OF_0X;
-	total_num_printed = printHexBase((long long unsigned int)ptr);
+	total_num_printed += printHexBase((long long unsigned int)ptr);
 	return (total_num_printed);
 }
 

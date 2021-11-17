@@ -8,6 +8,6 @@ int main()
 
 	i = 10;
 	ptr = &i;
-	printAddress(ptr);
+	printHexBase(ptr);
 	return (0);
 }
