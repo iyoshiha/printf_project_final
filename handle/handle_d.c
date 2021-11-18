@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:31 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 14:55:42 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 18:06:35 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int		handle_d(t_formatData* data)
 	int 	printed_num;
 
 	decimal = va_arg(data->ap, int);
-	printed_num = printnum();
+	printed_num = printDecimalBase(decimal, STDOUT_FILENO);
 	return (printed_num);
 }

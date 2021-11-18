@@ -6,30 +6,29 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:25:10 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 14:55:42 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 17:49:25 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../libft/libft.h"
 
-static	int	output_num(unsigned int unb, int fd)
+static	int	printNum(unsigned int unb, int fd)
 {
-	unsigned int	prited_num;
+	static int		printed_num;
 
 	if (unb / 10 == 0)
 	{
 		ft_putchar_fd('0' + unb, fd);
-		return ;
+		return (printed_num += 1);
 	}
-	output_num(unb / 10, fd);
+	printNum(unb / 10, fd);
 	ft_putchar_fd('0' + unb % 10, fd);
-
-	return (printed_num);
+	return (printed_num += 1);
 }
 
 int		printDecimalBase(int n, int fd)
 {
-	unsigned int unb;
+	unsigned int 	unb;
 
 	if (n < 0)
 	{
@@ -40,5 +39,5 @@ int		printDecimalBase(int n, int fd)
 	{
 		unb = n;
 	}
-	output_num(unb, fd);
+	return (printNum(unb,fd));
 }

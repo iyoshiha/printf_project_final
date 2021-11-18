@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:11:45 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 12:51:18 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 17:41:49 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,4 @@ int		replace_ten2a(int num);
 int		replace_ten2a_capital(int num);
 int		print0(void);
 int		print_unsigned_int_hex(unsigned int decimal);
+int		printDecimalBase(int n, int fd);
