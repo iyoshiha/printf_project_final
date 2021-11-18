@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pnbr.c                                             :+:      :+:    :+:   */
+/*   printDecimalBase.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 00:02:31 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 17:11:58 by iyoshiha         ###   ########.fr       */
+/*   Created: 2021/11/18 14:25:10 by iyoshiha          #+#    #+#             */
+/*   Updated: 2021/11/18 14:55:42 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../libft.h"
 
-static int	output_num(unsigned int unb, int fd)
+static	int	output_num(unsigned int unb, int fd)
 {
-	static int	printed_num;
+	unsigned int	prited_num;
 
 	if (unb / 10 == 0)
 	{
 		ft_putchar_fd('0' + unb, fd);
-		printed_num += 1;
-		return (printed_num);
+		return ;
 	}
 	output_num(unb / 10, fd);
 	ft_putchar_fd('0' + unb % 10, fd);
-	printed_num += 1;
+
 	return (printed_num);
 }
 
-int		ft_putnbr_fd_i(int n, int fd)
+int		printDecimalBase(int n, int fd)
 {
 	unsigned int unb;
 
@@ -41,5 +40,5 @@ int		ft_putnbr_fd_i(int n, int fd)
 	{
 		unb = n;
 	}
-	return (output_num(unb, fd));
+	output_num(unb, fd);
 }

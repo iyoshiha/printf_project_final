@@ -14,7 +14,7 @@ int main()
 
 	us = 0xabcdef01;
 # if defined (DEBUG)
-	ft_putnbr_fd(10479, STDOUT_FILENO);
+	printf("%d\n", ft_putnbr_fd_i(321, STDOUT_FILENO));
 # else
 	printHexBase((long long unsigned int)ptr);
 # endif
