@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 12:59:54 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 13:03:54 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 19:47:38 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	handle_lower_x(t_formatData* data)
 	unsigned int	ui;
 
 	ui = va_arg(data->ap, unsigned int);
-	LEN_PRINTED += printHexBase(ui, _PHEX_LOWERCASE);
+	_PF_LEN_PRINTED += printHexBase(ui, _PHEX_LOWERCASE);
 	return ;
 }
 

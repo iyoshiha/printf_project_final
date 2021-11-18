@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 13:04:14 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 19:47:42 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	handle_large_x(t_formatData* data)
 	unsigned int	ui;
 
 	ui = va_arg(data->ap, unsigned int);
-	LEN_PRINTED += printHexBase(ui, _PHEX_CAPITAL);
+	_PF_LEN_PRINTED += printHexBase(ui, _PHEX_CAPITAL);
 	return ;
 }
 

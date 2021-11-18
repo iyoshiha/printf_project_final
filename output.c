@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/14 16:16:12 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 19:47:51 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 void	outputAndCount(t_formatData*	data)
 {
-	INDEX = 0;
-	while (NOTEOS((FORMAT[INDEX])))
+	_PF_INDEX = 0;
+	while (_PF_NOTEOS((_PF_FORMAT[_PF_INDEX])))
 	{
-		if (FORMAT[INDEX] == '%')
+		if (_PF_FORMAT[_PF_INDEX] == '%')
 		{
-			NEXT INDEX++;
+			_PF_NEXT _PF_INDEX++;
 			convertAndCount(data);
 		}
 		else
 		{
-			ft_putchar_fd(FORMAT, STDOUT_FILENO);
-			ADD LEN_PRINTED++;
+			ft_putchar_fd(_PF_FORMAT, STDOUT_FILENO);
+			_PF_ADD _PF_LEN_PRINTED++;
 		}
-		NEXT INDEX++;
+		_PF_NEXT _PF_INDEX++;
 	}
 	return (0);
 }
