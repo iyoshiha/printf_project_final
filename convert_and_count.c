@@ -6,11 +6,12 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 05:50:26 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 22:00:40 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 22:27:40 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tmp.h"
+# include "handle/handle.h"
 
 void	ConvertAndCount(t_formatData* data)
 {
