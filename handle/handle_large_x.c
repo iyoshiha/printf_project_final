@@ -6,14 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 13:01:49 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 13:04:14 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../component/component.h"
 #include "../tmp.h"
 
-void	handle_largeX(t_formatData* data)
+void	handle_large_x(t_formatData* data)
 {
 	unsigned int	ui;
 
