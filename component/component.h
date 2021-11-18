@@ -6,9 +6,12 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:11:45 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 10:04:38 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 10:32:46 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#define CAPITAL 1
+#define LOWERCASE 0
 
 int		printAddress(void* ptr);
 int		printHexBase(long long unsigned int decimal);
