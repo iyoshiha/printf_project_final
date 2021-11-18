@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 04:03:35 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 10:30:24 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 10:36:15 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		printHexBase(long long unsigned int decimal, char flag)
 	if (decimal == 0)
 		return(print0());
 	if ((next_digit = (decimal / 16)) > 0)
-		printHexBase(next_digit);
+		printHexBase(next_digit, flag);
 	remainder = decimal % 16;
 	if (remainder >= 10)
 		if (flag == 1)
@@ -44,6 +44,13 @@ int		replace_ten2a(int num)
 	return (base + num);
 }
 
+int		replace_ten2a_capital(int num)
+{
+	int base;
+
+	base = 'A' - 10;
+	return (base + num);
+}
 int		print0(void)
 {
 	int		printed_num;
