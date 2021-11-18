@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:23 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 10:37:08 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 12:54:50 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int		print_unsigned_int_hex(unsigned int decimal)
 {
 	int		printed_num;
 
-	printed_num = printHexBase(decimal, LOWERCASE);
+	printed_num = printHexBase(decimal, _PHEX_LOWERCASE);
 	return (printed_num);
 }
