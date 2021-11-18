@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:25:10 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 18:42:12 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 19:03:03 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@ static	int	printNum(unsigned int unb, int fd)
 {
 	int		printed_num;
 
+	printed_num = 0;
 	if (unb / 10 == 0)
 	{
 		ft_putchar_fd('0' + unb, fd);
-		return (printed_num += 1);
+		printed_num += 1;
+		return (printed_num);
 	}
-	printNum(unb / 10, fd);
+	printed_num = printNum(unb / 10, fd);
 	ft_putchar_fd('0' + unb % 10, fd);
-	return (printed_num += 1);
+	printed_num += 1;
+	return (printed_num);
 }
 
 int		printDecimalBase(int n, int fd)
