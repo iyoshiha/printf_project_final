@@ -6,10 +6,11 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:43 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 19:47:40 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 22:03:38 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../component/component.h"
 #include "../tmp.h"
 
 void	handle_s(t_formatData* data)
