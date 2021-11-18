@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 23:58:25 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/19 00:13:31 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 # define _PF_LEN_PRINTED	data->printed_len
 # define _PF_CONV_MATCHED(conv)		((data->format[data->format_i]) == (conv))
 // # define _PF_CONV_MATCHED(conv)		((data->format[data->format_i]) == ('conv'))
-# define _PF_CONV_MATCHED_LOW_X 	((data->format[data->format_i]) == ('x')) handle_lower_x(data);
-# define _PF_CONV_MATCHED_CAP_X 	((data->format[data->format_i]) == ('X')) handle_large_x(data);
+# define _PF_CONV_MATCHED_LOW_X 	((data->format[data->format_i]) == ('x')) ret = handle_lower_x(data);
+# define _PF_CONV_MATCHED_CAP_X 	((data->format[data->format_i]) == ('X')) ret = handle_large_x(data);
 # define _NEXT
 # define _ADD
 # define _PF_LENGTH_OF_0X	2
