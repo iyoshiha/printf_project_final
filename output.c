@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 23:53:55 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 23:58:49 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	outputAndCount(t_formatData*	data)
 		if (_PF_FORMAT[_PF_INDEX] == '%')
 		{
 			_NEXT _PF_INDEX++;
-			convertAndCount(data);
+			_PF_LEN_PRINTED += convertAndCount(data);
 		}
 		else
 		{

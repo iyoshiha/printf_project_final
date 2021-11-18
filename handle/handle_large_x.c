@@ -6,20 +6,21 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 19:47:42 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/19 00:11:13 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../component/component.h"
 #include "../tmp.h"
 
-void	handle_large_x(t_formatData* data)
+int		handle_large_x(t_formatData* data)
 {
 	unsigned int	ui;
+	int				printed_num;
 
 	ui = va_arg(data->ap, unsigned int);
-	_PF_LEN_PRINTED += printHexBase(ui, _PHEX_CAPITAL);
-	return ;
+	printed_num = printHexBase(ui, _PHEX_CAPITAL);
+	return (printed_num);
 }
 
 /*

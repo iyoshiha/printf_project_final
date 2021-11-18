@@ -6,19 +6,20 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:43 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 22:37:01 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/19 00:10:24 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../component/component.h"
 #include "../tmp.h"
 
-void	handle_s(t_formatData* data)
+int		handle_s(t_formatData* data)
 {
 	char* str;
+	int				printed_num;
 
 	str = va_arg(data->ap, char*);
 	ft_putstr_fd(str, STDOUT_FILENO);
-	_PF_LEN_PRINTED += ft_strlen(str);
-	return ;
+	printed_num = ft_strlen(str);
+	return (printed_num);
 }

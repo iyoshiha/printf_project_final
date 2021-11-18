@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 05:50:26 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 23:52:31 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 23:58:55 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # include "handle/handle.h"
 # include "component/component.h"
 
-void	convertAndCount(t_formatData* data)
+int		convertAndCount(t_formatData* data)
 {
 	if _PF_CONV_MATCHED('c')
 		handle_c(data);

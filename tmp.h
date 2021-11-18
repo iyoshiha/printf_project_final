@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 23:18:33 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 23:58:25 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct	s_formatData
 
 
 void	outputAndCount(t_formatData* data);
-void	convertAndCount(t_formatData* data);
+int		convertAndCount(t_formatData* data);
 
 
 #endif
