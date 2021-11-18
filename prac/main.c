@@ -1,5 +1,6 @@
-#include "component.h"
+#include "../component/component.h"
 # include "../ft_printf.h"
+# include "../tmp.h"
 // ################ DEBUG
 # define DEBUG
 
@@ -9,14 +10,12 @@
 // ################
 int main()
 {
-	void*	ptr;
-	int		i;
+	unsigned int	us;
 
-	i = 10;
-	ptr = &i;
+	us = 0xabcdef01;
 # if defined (DEBUG)
-	printf("\n%d\n",printAddress(ptr));
-	printf("\n%d\n",printf("%p",(ptr)));
+	printf("\n%d\n",print_unsigned_int_hex(0));
+	printf("\n%d\n",printf("%x",0));
 # else
 	printHexBase((long long unsigned int)ptr);
 # endif

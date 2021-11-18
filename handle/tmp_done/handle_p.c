@@ -6,13 +6,13 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:40 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/15 21:20:16 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 10:05:41 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../tmp.h"
 
-void	handle_p(t_formatData data)
+void	handle_p(t_formatData* data)
 {
 	void*	ptr;
 

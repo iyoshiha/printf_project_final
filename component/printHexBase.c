@@ -6,14 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 04:03:35 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 04:11:06 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 10:30:24 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../header/libft.h"
 # include "component.h"
 
-int		printHexBase(long long unsigned int decimal)
+int		printHexBase(long long unsigned int decimal, char flag)
 {
 	long long unsigned int	next_digit;
 	int remainder;
@@ -25,7 +25,10 @@ int		printHexBase(long long unsigned int decimal)
 		printHexBase(next_digit);
 	remainder = decimal % 16;
 	if (remainder >= 10)
-		remainder = replace_ten2a(remainder);
+		if (flag == 1)
+			remainder = replace_ten2a_capital(remainder);
+		else
+			remainder = replace_ten2a(remainder);
 	else
 		remainder += '0';
 	ft_putchar_fd (remainder, STDOUT_FILENO);
