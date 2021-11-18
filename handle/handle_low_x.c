@@ -6,14 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 12:59:54 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/19 00:11:18 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/19 00:17:03 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../component/component.h"
 #include "../tmp.h"
 
-void	handle_lower_x(t_formatData* data)
+int		handle_lower_x(t_formatData* data)
 {
 	unsigned int	ui;
 	int				printed_num;
