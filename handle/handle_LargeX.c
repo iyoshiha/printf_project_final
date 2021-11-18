@@ -6,8 +6,10 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 09:49:22 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/18 10:37:27 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../component/component.h"
 #include "../tmp.h"
+
