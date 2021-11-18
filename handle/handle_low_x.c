@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   handle_LargeX.c                                    :+:      :+:    :+:   */
+/*   handle_low_x.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 12:52:26 by iyoshiha         ###   ########.fr       */
+/*   Created: 2021/11/18 12:59:54 by iyoshiha          #+#    #+#             */
+/*   Updated: 2021/11/18 13:01:31 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../component/component.h"
 #include "../tmp.h"
 
-void	handle_largeX(t_formatData* data)
+void	handle_x(t_formatData* data)
 {
 	unsigned int	ui;
 
 	ui = va_arg(data->ap, unsigned int);
-	LEN_PRINTED += printHexBase(ui, _PHEX_CAPITAL);
+	LEN_PRINTED += print_unsigned_int_hex(ui);
 	return ;
 }
 
-/*
 int		print_unsigned_int_hex(unsigned int decimal)
 {
 	int		printed_num;
 
-	printed_num = printHexBase(decimal, LOWERCASE);
+	printed_num = printHexBase(decimal, _PHEX_LOWERCASE);
 	return (printed_num);
 }
-this is meaning less??? we can pass arg directly?
-*/
