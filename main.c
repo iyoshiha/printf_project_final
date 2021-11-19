@@ -10,15 +10,15 @@ int main()
 	int count[100];
 	int	i = 0;
 	//
-	count[i++] = ft_printf("%p", &i);
-	count[i++] = ft_printf("%x\n", 0xabc);
-	count[i++] = ft_printf("\n%s\n", "abc");
-	count[i++] = ft_printf("%d\n", 12345);
+	count[i++] = printf("%p", &i);
+	count[i++] = printf("%x\n", 0xabc);
+	count[i++] = printf("\n%s\n", "abc");
+	count[i++] = printf("%d\n", 12345);
 
-	count[i++] = ft_printf("%p\n", &i);
-	count[i++] = ft_printf("%i\n", 1234);
-	count[i++] = ft_printf("%u\n", 0xFFFFFFFF);
-	count[i++] = ft_printf("%X\n", 0xFBA); // bug returns 11 but should be 8
+	count[i++] = printf("%p\n", &i);
+	count[i++] = printf("%i\n", 1234);
+	count[i++] = printf("%u\n", 0xFFFFFFFF);
+	count[i++] = printf("%X\n", 0xFBA); // bug returns 11 but should be 8
 	//
 	// count[i++] = ft_printf("%X\n%X\n", 0xFBA,0xFBA); // bug returns 11 but should be 8
 /*
