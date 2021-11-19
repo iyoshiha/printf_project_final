@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 04:03:35 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 10:36:15 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/19 20:51:17 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ int		printHexBase(long long unsigned int decimal, char flag)
 {
 	long long unsigned int	next_digit;
 	int remainder;
-	static int printed_num;
+	int printed_num;
 
+	printed_num = 0;
 	if (decimal == 0)
 		return(print0());
 	if ((next_digit = (decimal / 16)) > 0)
