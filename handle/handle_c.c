@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 15:10:13 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/19 00:04:53 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/19 22:37:29 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int		handle_c(t_formatData* data)
 {
-	char chr;
+	unsigned char chr;
 	int		printed_num;
 
 	chr = va_arg(data->ap, int);
