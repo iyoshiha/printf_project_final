@@ -11,7 +11,7 @@ int main()
 	// int	i = 11;
 	char s[] = "noone";
 
-		printf("%u", s);
+		printf("%s", s);
 	    // printf("%010.3d:\n", i);
 		// printf("%-010.3d:\n", i);
 
