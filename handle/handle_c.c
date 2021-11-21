@@ -6,12 +6,12 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 15:10:13 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/19 22:37:29 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/21 15:31:21 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../component/component.h"
-#include "../tmp.h"
+#include "../includes/printHexBase.h"
+# include "../includes/ft_printf.h"
 
 int		handle_c(t_formatData* data)
 {

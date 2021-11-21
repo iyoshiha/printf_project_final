@@ -6,12 +6,12 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 12:59:54 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/19 00:17:03 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/21 15:30:51 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../component/component.h"
-#include "../tmp.h"
+#include "../includes/printHexBase.h"
+# include "../includes/ft_printf.h"
 
 int		handle_lower_x(t_formatData* data)
 {
@@ -19,7 +19,7 @@ int		handle_lower_x(t_formatData* data)
 	int				printed_num;
 
 	ui = va_arg(data->ap, unsigned int);
-	printed_num = printHexBase(ui, _PHEX_LOWERCASE);
+	printed_num = printHexBase(ui, PHEX_LOWERCASE);
 	return (printed_num);
 }
 
