@@ -14,7 +14,7 @@ int main()
 		printf("%s", s);
 	    // printf("%010.3d:\n", i);
 		// printf("%-010.3d:\n", i);
-
+//
 	/*
 	count[i++] = ft_printf("%p", &i);
 	count[i++] = ft_printf("%x\n", 0xabc);
