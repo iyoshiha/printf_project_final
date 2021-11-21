@@ -6,12 +6,13 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:11:45 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 18:29:40 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/21 13:48:35 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define _PHEX_CAPITAL 1
-#define _PHEX_LOWERCASE 0
+#define PHEX_CAPITAL 1
+#define PHEX_LOWERCASE 0
+# define PHEX_LEN_OF_0X	2
 
 int		printAddress(void* ptr);
 int		printHexBase(long long unsigned int decimal, char flag);
