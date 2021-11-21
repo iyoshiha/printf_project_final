@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   output.c                                           :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 14:27:01 by iyoshiha         ###   ########.fr       */
+/*   Created: 2021/11/14 03:01:04 by iyoshiha          #+#    #+#             */
+/*   Updated: 2021/11/21 14:58:31 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	outputAndCount(t_formatData*	data)
+int	ft_printf(const	char* format, ...)
 {
-	_PF_INDEX = 0;
-	while (_PF_NOTEOS((_PF_FORMAT[_PF_INDEX])))
-	{
-		if (_PF_FORMAT[_PF_INDEX] == '%')
-		{
-			_NEXT _PF_INDEX++;
-			_PF_LEN_PRINTED += convertAndCount(data);
-		}
-		else
-		{
-			ft_putchar_fd(_PF_FORMAT[_PF_INDEX], STDOUT_FILENO);
-			_ADD _PF_LEN_PRINTED++;
-		}
-		_NEXT _PF_INDEX++;
-	}
+	t_formatData	entity;
+	t_formatData*	data;
+
+	data = &entity;
+	_PF_FORMAT = format;
+	_PF_LEN_PRINTED = 0;
+	va_start(_PF_AP, format);
+	outputAndCount(data);
+	va_end(_PF_AP);
+	return (_PF_LEN_PRINTED);	// excluding the null byte ('\0') used to end output to strings.
+						 	// negative number returned when error happened.
 }
