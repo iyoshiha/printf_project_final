@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:08:08 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 13:53:18 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/21 14:15:35 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,8 @@ int		printAddress(void* ptr)
 	total_num_printed += printHexBase((long long unsigned int)ptr, PHEX_LOWERCASE);
 	return (total_num_printed);
 }
+
+/*
+	return: the total number of printed charactors.
+	printout pointer type value assigned as argument.
+*/

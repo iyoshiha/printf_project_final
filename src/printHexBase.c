@@ -6,12 +6,12 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 04:03:35 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/19 21:38:21 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/21 14:17:10 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
-# include "component.h"
+#include "../includes/libft.h"
+# include "../includes/printHexBase.h"
 
 int		printHexBase(long long unsigned int decimal, char flag)
 {
@@ -58,3 +58,7 @@ int		print0(void)
 	ft_putchar_fd('0', STDOUT_FILENO);
 	return (printed_num = 1);
 }
+/*
+	return: int type ; the total number of printed charactors.
+	printout pointer type value assigned as argument.
+*/

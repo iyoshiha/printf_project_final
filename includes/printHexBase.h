@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   component.h                                        :+:      :+:    :+:   */
+/*   printHexBase.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:11:45 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 13:48:35 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/21 14:02:25 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define PHEX_CAPITAL 1
-#define PHEX_LOWERCASE 0
+#ifndef PRINTHEXBASE_H
+# define PRINTHEXBASE_H
+
+# define PHEX_CAPITAL 1
+# define PHEX_LOWERCASE 0
 # define PHEX_LEN_OF_0X	2
 
 int		printAddress(void* ptr);
@@ -22,3 +25,5 @@ int		print0(void);
 int		print_unsigned_int_hex(unsigned int decimal);
 int		printDecimalBase(int n, int fd);
 int		printUnsignedDecimal(unsigned int n, int fd);
+
+# endif
