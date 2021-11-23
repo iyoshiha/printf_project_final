@@ -56,15 +56,6 @@ int main()
 	printf("%d\n", i);
 	i = ft_printf("%d\n", mi_i);
 	printf("%d\n", i);
-	/*
-	i = printf("%d\n", );
-	i = printf("%d\n", );
-	i = printf("%d\n", );
-	i = printf("%d\n", "");
-	i = printf("%d\n", "");
-	i = printf("%d\n", "");
-	i = printf("%d\n", "");
-	*/
 	puts("========= i =========");
 	i = printf("%d\n", 0);
 	printf("%d\n", i);
@@ -120,8 +111,8 @@ int main()
 	printf("%u\n", i);
 	i = ft_printf("%%\n");
 	printf("%u\n",i);
-	i = printf("", i);
 	puts("====================");
+	i = ft_printf(NULL);
 	printf("%u\n",i);
 	return 0;
 }

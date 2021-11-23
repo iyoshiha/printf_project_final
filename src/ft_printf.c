@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 03:01:04 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/24 01:45:45 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/24 04:24:13 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int	ft_printf(const	char* format, ...)
 	t_formatData*	data;
 
 	data = &entity;
-	data->format = format;
+	if (!(data->format = format))
+		return (ERROR);
 	data->printed_len = 0;
 	va_start(data->ap, format);
 	outputAndCount(data);
