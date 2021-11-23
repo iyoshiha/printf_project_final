@@ -6,12 +6,12 @@
 #    By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 13:00:37 by iyoshiha          #+#    #+#              #
-#    Updated: 2021/11/24 02:54:52 by iyoshiha         ###   ########.fr        #
+#    Updated: 2021/11/24 03:04:30 by iyoshiha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CFLAGS = -Wall -Wextra -Werror
-NAME = libprintf.a
+CFLAGS 	=	-Wall -Wextra -Werror
+NAME	=	libprintf.a
 LIBFT	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
 			ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c \
@@ -28,11 +28,7 @@ CONV_O	=	$(CONV:.c=.o)
 HEX		=	printAddress.c printDecimalBase.c printHexBase.c
 HEX_O	=	$(HEX:.c=.o)
 OBJECTS =	$(LIBFT_O) $(SRC_O) $(CONV_O) $(HEX_O)
-SRC_D	=	src
-HEX_D	=	hex_component
-CONV_D	=	handle
-LIBFT_D	=	libft
-VPATH	= src hex_component handle libft
+VPATH	= 	hex_component handle libft src
 
 all: $(NAME)
 
@@ -40,18 +36,16 @@ $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
 $(LIBFT_O): %.o: %.c
-	gcc $(CFLAGS) -c $(LIBFT_D)/$< -o $@
+	gcc $(CFLAGS) -c $< -o $@
 
 $(HEX_O): %.o: %.c
-	gcc $(CFLAGS) -c $(HEX_D)/$(HEX) -o $(HEX_O)
+	gcc $(CFLAGS) -c $< -o $@
 
 $(CONV_O): %.o: %.c
-	gcc $(CFLAGS) -c $(CONV_D)/$(CONV) -o $(CONV_O)
+	gcc $(CFLAGS) -c $< -o $@
 
 $(SRC_O): %.o: %.c
-	echo $(SRC)
-	echo $(SRC_O)
-	gcc $(CFLAGS) -c $(SRC_D)/$(SRC) -o	$(SRC_O)
+	gcc $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJECTS)
@@ -62,5 +56,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-# problem : theres directory so we need to speciify dir.
