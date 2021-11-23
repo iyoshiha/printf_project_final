@@ -6,12 +6,13 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/19 00:11:13 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/21 15:33:33 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../component/component.h"
-#include "../tmp.h"
+#include "../includes/printHexBase.h"
+# include "../includes/ft_printf.h":wq
+
 
 int		handle_large_x(t_formatData* data)
 {
@@ -19,17 +20,6 @@ int		handle_large_x(t_formatData* data)
 	int				printed_num;
 
 	ui = va_arg(data->ap, unsigned int);
-	printed_num = printHexBase(ui, _PHEX_CAPITAL);
+	printed_num = printHexBase(ui, PHEX_CAPITAL);
 	return (printed_num);
 }
-
-/*
-int		print_unsigned_int_hex(unsigned int decimal)
-{
-	int		printed_num;
-
-	printed_num = printHexBase(decimal, LOWERCASE);
-	return (printed_num);
-}
-this is meaning less??? we can pass arg directly?
-*/

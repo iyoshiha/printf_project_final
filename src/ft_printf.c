@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   component.h                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 06:11:45 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/18 18:29:40 by iyoshiha         ###   ########.fr       */
+/*   Created: 2021/11/14 03:01:04 by iyoshiha          #+#    #+#             */
+/*   Updated: 2021/11/21 14:58:31 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define _PHEX_CAPITAL 1
-#define _PHEX_LOWERCASE 0
+#include "../includes/ft_printf.h"
 
-int		printAddress(void* ptr);
-int		printHexBase(long long unsigned int decimal, char flag);
-int		replace_ten2a(int num);
-int		replace_ten2a_capital(int num);
-int		print0(void);
-int		print_unsigned_int_hex(unsigned int decimal);
-int		printDecimalBase(int n, int fd);
-int		printUnsignedDecimal(unsigned int n, int fd);
+int	ft_printf(const	char* format, ...)
+{
+	t_formatData	entity;
+	t_formatData*	data;
+
+	data = &entity;
+	_PF_FORMAT = format;
+	_PF_LEN_PRINTED = 0;
+	va_start(_PF_AP, format);
+	outputAndCount(data);
+	va_end(_PF_AP);
+	return (_PF_LEN_PRINTED);	// excluding the null byte ('\0') used to end output to strings.
+						 	// negative number returned when error happened.
+}

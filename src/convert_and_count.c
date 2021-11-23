@@ -6,33 +6,35 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 05:50:26 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/19 00:14:43 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/21 14:42:18 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tmp.h"
-# include "handle/handle.h"
-# include "component/component.h"
+#include "../includes/ft_printf.h"
+# include "../includes/handle.h"
+# include "../includes/printHexBase.h"
 
 int		convertAndCount(t_formatData* data)
 {
 	int ret;
 
-	if _PF_CONV_MATCHED('c')
+	if ((data->format[data->format_i]) == ('c'))
 		ret = handle_c(data);
-	if _PF_CONV_MATCHED('s')
+	if ((data->format[data->format_i]) == ('s'))
 		ret = handle_s(data);
-	if _PF_CONV_MATCHED('p')
+	if ((data->format[data->format_i]) == ('p'))
 		ret = handle_p(data);
-	if _PF_CONV_MATCHED('d')
+	if ((data->format[data->format_i]) == ('d'))
 		ret = handle_d(data);
-	if _PF_CONV_MATCHED('i')
+	if ((data->format[data->format_i]) == ('i'))
 		ret = handle_i(data);
-	if _PF_CONV_MATCHED('u')
+	if ((data->format[data->format_i]) == ('u'))
 		ret = handle_u(data);
-	if _PF_CONV_MATCHED_LOW_X
-	if _PF_CONV_MATCHED_CAP_X
-	if _PF_CONV_MATCHED('%')
+	if ((data->format[data->format_i]) == ('x'))
+		ret = handle_lower_x(data);
+	if ((data->format[data->format_i]) == ('X'))
+		ret = handle_large_x(data);
+	if ((data->format[data->format_i]) == ('%'))
 		ret = handle_pct(data);
 	return (ret);
 }
