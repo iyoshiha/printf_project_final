@@ -6,55 +6,40 @@
 #    By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 13:00:37 by iyoshiha          #+#    #+#              #
-#    Updated: 2021/11/24 02:54:52 by iyoshiha         ###   ########.fr        #
+#    Updated: 2021/11/24 01:53:17 by iyoshiha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror
 NAME = libprintf.a
-LIBFT	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
-			ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
-			ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c \
-			ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-			ft_toupper.c ft_tolower.c ft_calloc.c ft_strdup.c ft_substr.c \
-			ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
-			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+LIBFT =		libft/ft_memset.c libft/ft_bzero.c libft/ft_memcpy.c libft/ft_memccpy.c libft/ft_memmove.c \
+			libft/ft_memchr.c libft/ft_memcmp.c libft/ft_strlen.c libft/ft_strlcpy.c libft/ft_strlcat.c \
+			libft/ft_strchr.c libft/ft_strrchr.c libft/ft_strnstr.c libft/ft_strncmp.c libft/ft_atoi.c \
+			libft/ft_isalpha.c libft/ft_isdigit.c libft/ft_isalnum.c libft/ft_isascii.c libft/ft_isprint.c \
+			libft/ft_toupper.c libft/ft_tolower.c libft/ft_calloc.c libft/ft_strdup.c libft/ft_substr.c \
+			libft/ft_strjoin.c libft/ft_strtrim.c libft/ft_split.c libft/ft_itoa.c libft/ft_strmapi.c \
+			libft/ft_putchar_fd.c libft/ft_putstr_fd.c libft/ft_putendl_fd.c libft/ft_putnbr_fd.c
 LIBFT_O =	$(LIBFT:.c=.o)
-SRC		=	ft_printf.c output.c convert_and_count.c
+SRC		=	src/ft_printf.c src/output.c src/convert_and_count.c
 SRC_O	=	$(SRC:.c=.o)
-CONV	= 	handle_d.c handle_i.c handle_large_x.c handle_low_x.c handle_p.c \
-			handle_c.c handle_pct.c handle_s.c handle_u.c
+CONV	= 	handle/handle_d.c handle/handle_i.c handle/handle_large_x.c handle/handle_low_x.c handle/handle_p.c \
+			handle/handle_c.c handle/handle_pct.c handle/handle_s.c handle/handle_u.c
 CONV_O	=	$(CONV:.c=.o)
-HEX		=	printAddress.c printDecimalBase.c printHexBase.c
+HEX		=	hex_component/printAddress.c hex_component/printDecimalBase.c hex_component/printHexBase.c
 HEX_O	=	$(HEX:.c=.o)
 OBJECTS =	$(LIBFT_O) $(SRC_O) $(CONV_O) $(HEX_O)
-SRC_D	=	src
-HEX_D	=	hex_component
-CONV_D	=	handle
-LIBFT_D	=	libft
-VPATH	= src hex_component handle libft
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
-$(LIBFT_O): %.o: %.c
-	gcc $(CFLAGS) -c $(LIBFT_D)/$< -o $@
+%.o: %.c
+	gcc $(CFLAGS) -c $< -o ../$@
 
-$(HEX_O): %.o: %.c
-	gcc $(CFLAGS) -c $(HEX_D)/$(HEX) -o $(HEX_O)
-
-$(CONV_O): %.o: %.c
-	gcc $(CFLAGS) -c $(CONV_D)/$(CONV) -o $(CONV_O)
-
-$(SRC_O): %.o: %.c
-	echo $(SRC)
-	echo $(SRC_O)
-	gcc $(CFLAGS) -c $(SRC_D)/$(SRC) -o	$(SRC_O)
 
 clean:
-	$(RM) $(OBJECTS)
+	$(RM) ../$(OBJECTS)
 
 fclean: clean
 	$(RM) $(NAME)

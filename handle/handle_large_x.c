@@ -6,12 +6,12 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 15:33:33 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/24 01:47:40 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/printHexBase.h"
-# include "../includes/ft_printf.h":wq
+# include "../includes/ft_printf.h"
 
 
 int		handle_large_x(t_formatData* data)

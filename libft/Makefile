@@ -6,7 +6,7 @@
 #    By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 13:00:37 by iyoshiha          #+#    #+#              #
-#    Updated: 2021/11/23 18:36:20 by iyoshiha         ###   ########.fr        #
+#    Updated: 2021/11/23 23:49:20 by iyoshiha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ OBJECTS = $(SRCFILE:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+	ar rsc $(NAME) $(OBJECTS)
 
 %.o: %.c
 	gcc $(CFLAGS) -c $< -o $@

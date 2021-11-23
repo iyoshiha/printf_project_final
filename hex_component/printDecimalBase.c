@@ -6,11 +6,11 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:25:10 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 14:18:48 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/24 01:50:02 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#include "../includes/libft.h"
 # include "../includes/printHexBase.h"
 
 static	int	printNum(unsigned int unb, int fd)

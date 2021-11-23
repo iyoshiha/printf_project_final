@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 00:02:31 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/23 18:40:40 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/23 18:47:17 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void output_num(unsigned int unb, int fd)
 	ft_putchar_fd('0' + unb % 10, fd);
 }
 
-void	ft_putnbr_fd_i(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int unb;
 
@@ -36,4 +36,5 @@ void	ft_putnbr_fd_i(int n, int fd)
 	{
 		unb = n;
 	}
+	output_num(unb, STDERR_FILENO);
 }

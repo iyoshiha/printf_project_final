@@ -6,11 +6,11 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 04:03:35 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 14:17:10 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/24 01:50:00 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../libft/libft.h"
 # include "../includes/printHexBase.h"
 
 int		printHexBase(long long unsigned int decimal, char flag)

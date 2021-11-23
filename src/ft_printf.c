@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 03:01:04 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 14:58:31 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/24 01:45:45 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int	ft_printf(const	char* format, ...)
 	t_formatData*	data;
 
 	data = &entity;
-	_PF_FORMAT = format;
-	_PF_LEN_PRINTED = 0;
-	va_start(_PF_AP, format);
+	data->format = format;
+	data->printed_len = 0;
+	va_start(data->ap, format);
 	outputAndCount(data);
-	va_end(_PF_AP);
-	return (_PF_LEN_PRINTED);	// excluding the null byte ('\0') used to end output to strings.
+	va_end(data->ap);
+	return (data->printed_len);	// excluding the null byte ('\0') used to end output to strings.
 						 	// negative number returned when error happened.
 }
