@@ -1,3 +1,4 @@
 prac/
-./main
+main
 *.o
+libftprintf.a
