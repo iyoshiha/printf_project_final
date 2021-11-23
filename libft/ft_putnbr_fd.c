@@ -6,29 +6,24 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 00:02:31 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/23 18:38:03 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/23 18:40:40 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	output_num(unsigned int unb, int fd)
+static void output_num(unsigned int unb, int fd)
 {
-	static int	printed_num;
-
 	if (unb / 10 == 0)
 	{
 		ft_putchar_fd('0' + unb, fd);
-		printed_num += 1;
-		return (printed_num);
+		return ;
 	}
 	output_num(unb / 10, fd);
 	ft_putchar_fd('0' + unb % 10, fd);
-	printed_num += 1;
-	return (printed_num);
 }
 
-int		ft_putnbr_fd_i(int n, int fd)
+void	ft_putnbr_fd_i(int n, int fd)
 {
 	unsigned int unb;
 
@@ -41,5 +36,4 @@ int		ft_putnbr_fd_i(int n, int fd)
 	{
 		unb = n;
 	}
-	return (output_num(unb, fd));
 }
