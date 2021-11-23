@@ -90,8 +90,38 @@ int main()
 	printf("%u\n", i);
 
 	puts("========= x =========");
-
+	i = printf("%x\n", li);
+	printf("%u\n", i);
+	i = ft_printf("%x\n", li);
+	printf("%u\n", i);
+	i = printf("%x\n", 0xffffffff);
+	printf("%u\n", i);
+	i = ft_printf("%x\n", 0xffffffff);
+	printf("%u\n", i);
+	i = printf("%x\n", 0);
+	printf("%u\n", i);
+	i = ft_printf("%x\n", 0);
+	printf("%u\n", i);
 	puts("========= X =========");
-	printf("======== %% =========");
+	i = printf("%X\n", li);
+	printf("%u\n", i);
+	i = ft_printf("%X\n", li);
+	printf("%u\n", i);
+	i = printf("%X\n", 0xffffffff);
+	printf("%u\n", i);
+	i = ft_printf("%X\n", 0xffffffff);
+	printf("%u\n", i);
+	i = printf("%X\n", 0);
+	printf("%u\n", i);
+	i = ft_printf("%X\n", 0);
+	printf("%u\n", i);
+	printf("======== %% =========\n");
+	i = printf("%%\n");
+	printf("%u\n", i);
+	i = ft_printf("%%\n");
+	printf("%u\n",i);
+	i = printf("", i);
+	puts("====================");
+	printf("%u\n",i);
 	return 0;
 }
