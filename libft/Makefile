@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: iyoshiha <iyoshiha@student.42tokyo.>       +#+  +:+       +#+         #
+#    By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 13:00:37 by iyoshiha          #+#    #+#              #
-#    Updated: 2020/11/01 05:24:44 by iyoshiha         ###   ########.fr        #
+#    Updated: 2021/11/23 18:36:20 by iyoshiha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
 %.o: %.c
-	gcc $(CFLAGS) -c $< -o $@ -I.
+	gcc $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJECTS)
