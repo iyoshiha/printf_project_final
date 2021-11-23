@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 15:11:20 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/24 03:12:54 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ void	outputAndCount(t_formatData*	data)
 	{
 		if (data->format[data->format_i] == '%')
 		{
-			_NEXT data->format_i++;
+			data->format_i++;
 			data->printed_len += convertAndCount(data);
 		}
 		else
 		{
 			ft_putchar_fd(data->format[data->format_i], STDOUT_FILENO);
-			_ADD data->printed_len++;
+			data->printed_len++;
 		}
-		_NEXT data->format_i++;
+		data->format_i++;
 	}
 }
