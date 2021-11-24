@@ -6,14 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/24 03:12:54 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 03:01:42 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-# include "../includes/libft.h"
+#include "../includes/libft.h"
 
-void	outputAndCount(t_formatData*	data)
+void	outputAndCount(t_formatData	*data)
 {
 	data->format_i = 0;
 	while (data->format[data->format_i] != '\0')
