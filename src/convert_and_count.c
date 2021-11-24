@@ -6,17 +6,17 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 05:50:26 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 14:42:18 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 02:58:41 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-# include "../includes/handle.h"
-# include "../includes/printHexBase.h"
+#include "../includes/handle.h"
+#include "../includes/printHexBase.h"
 
-int		convertAndCount(t_formatData* data)
+int	convertAndCount(t_formatData *data)
 {
-	int ret;
+	int	ret;
 
 	if ((data->format[data->format_i]) == ('c'))
 		ret = handle_c(data);
