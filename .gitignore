@@ -2,3 +2,4 @@ prac/
 main
 *.o
 libftprintf.a
+a.out

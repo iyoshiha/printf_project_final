@@ -1,8 +1,0 @@
-ft_printf.c: OK!
-convert_and_count.c: Error!
-Error: TOO_MANY_TABS_FUNC   (line:  17, col:   5):	extra tabs before function name
-Error: SPC_AFTER_POINTER    (line:  17, col:  37):	space after pointer
-Error: SPACE_REPLACE_TAB    (line:  19, col:   8):	Found space when expecting tab
-output.c: Error!
-Error: PREPROC_BAD_INDENT   (line:  14, col:   1):	Bad preprocessor indentation
-Error: SPC_AFTER_POINTER    (line:  16, col:  36):	space after pointer

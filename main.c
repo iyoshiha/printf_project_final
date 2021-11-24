@@ -112,7 +112,5 @@ int main()
 	i = ft_printf("%%\n");
 	printf("%u\n",i);
 	puts("====================");
-	i = ft_printf(NULL);
-	printf("%u\n",i);
 	return 0;
 }
