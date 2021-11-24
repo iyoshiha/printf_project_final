@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 22:54:39 by iyoshiha          #+#    #+#             */
-/*   Updated: 2020/10/31 01:16:37 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 05:25:03 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	int result;
+	int	result;
 
 	result = 0;
 	if (c >= 32 && c <= 126)

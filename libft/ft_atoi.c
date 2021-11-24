@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 22:37:35 by iyoshiha          #+#    #+#             */
-/*   Updated: 2020/10/30 13:24:42 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 04:43:13 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 static int	ft_isspace(int c)
 {
-	int result;
+	int	result;
 
 	result = 0;
 	if (c == '\t' || c == '\n' || c == '\v'
-			|| c == '\f' || c == '\r' || c == ' ')
+		|| c == '\f' || c == '\r' || c == ' ')
 		result = 1;
 	return (result);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	unsigned long	num;
 	int				sign;

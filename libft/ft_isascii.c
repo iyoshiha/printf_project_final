@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 22:52:33 by iyoshiha          #+#    #+#             */
-/*   Updated: 2020/10/29 22:52:45 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 05:24:26 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(int c)
 {
-	int result;
+	int	result;
 
 	result = 0;
 	if (c >= 0 && c <= 127)

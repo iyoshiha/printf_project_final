@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 00:27:42 by iyoshiha          #+#    #+#             */
-/*   Updated: 2020/10/31 02:25:26 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 05:30:35 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	if (!(joined_str = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1))))
+	joined_str = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (!(joined_str))
 		return (NULL);
 	while (i < len_s1)
 	{

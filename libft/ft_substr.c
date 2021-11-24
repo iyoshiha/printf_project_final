@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 06:03:15 by iyoshiha          #+#    #+#             */
-/*   Updated: 2020/10/31 14:39:45 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 05:35:05 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (s_len < (start + len))
 		len = s_len - start;
-	if (!(sub_s = (char *)malloc(sizeof(char) * (len + 1))))
+	sub_s = (char *)malloc(sizeof(char) * (len + 1));
+	if (!(sub_s))
 		return (NULL);
 	i = 0;
 	while (i < len)

@@ -6,13 +6,13 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 00:02:31 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/23 18:47:17 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 05:28:55 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void output_num(unsigned int unb, int fd)
+static void	output_num(unsigned int unb, int fd)
 {
 	if (unb / 10 == 0)
 	{
@@ -25,7 +25,7 @@ static void output_num(unsigned int unb, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int unb;
+	unsigned int	unb;
 
 	if (n < 0)
 	{

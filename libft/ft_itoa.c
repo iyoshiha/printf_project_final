@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 22:57:23 by iyoshiha          #+#    #+#             */
-/*   Updated: 2020/10/31 02:59:52 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 05:26:43 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	assign_unsigend_n(int n, unsigned int *unsigned_n)
 		*unsigned_n = (unsigned int)n;
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	unsigned int	unsigned_n;
 	char			*str;
@@ -50,7 +50,8 @@ char		*ft_itoa(int n)
 	}
 	if (n < 0)
 		digit++;
-	if (!(str = malloc(sizeof(char) * (digit + 1))))
+	str = malloc(sizeof(char) * (digit + 1));
+	if (!(str))
 		return (NULL);
 	strr = str + digit;
 	*strr = '\0';

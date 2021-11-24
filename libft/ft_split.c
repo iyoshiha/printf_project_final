@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 00:16:20 by iyoshiha          #+#    #+#             */
-/*   Updated: 2020/10/30 14:36:53 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 05:34:07 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	count_chanks(const char *s, char c)
 		if (*s == c)
 		{
 			s++;
-			continue;
+			continue ;
 		}
 		count++;
 		while (*s && !(*s == c))
@@ -45,7 +45,8 @@ static char	**split_str(char **splited_strs, const char *s, char c, int count)
 		len = 0;
 		while (s[len] && !(s[len] == c))
 			len++;
-		if (!(splited_strs[i] = malloc(sizeof(char) * (len + 1))))
+		splited_strs[i] = malloc(sizeof(char) * (len + 1));
+		if (!(splited_strs[i]))
 		{
 			while (i >= 0)
 				free(splited_strs[i--]);
@@ -58,7 +59,7 @@ static char	**split_str(char **splited_strs, const char *s, char c, int count)
 	return (splited_strs);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		count;
 	char	**splited_strs;
@@ -66,7 +67,8 @@ char		**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	count = count_chanks(s, c);
-	if (!(splited_strs = (char **)malloc(sizeof(*splited_strs) * (count + 1))))
+	splited_strs = (char **)malloc(sizeof(*splited_strs) * (count + 1));
+	if (!(splited_strs))
 		return (NULL);
 	splited_strs[count] = NULL;
 	if (!(split_str(splited_strs, s, c, count)))
