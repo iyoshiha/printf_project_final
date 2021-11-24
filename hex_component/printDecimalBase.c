@@ -6,16 +6,16 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:25:10 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/24 01:50:02 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 04:03:31 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-# include "../includes/printHexBase.h"
+#include <libft.h>
+#include <printHexBase.h>
 
 static	int	printNum(unsigned int unb, int fd)
 {
-	int		printed_num;
+	int	printed_num;
 
 	printed_num = 0;
 	if (unb / 10 == 0)
@@ -30,9 +30,9 @@ static	int	printNum(unsigned int unb, int fd)
 	return (printed_num);
 }
 
-int		printDecimalBase(int n, int fd)
+int	printDecimalBase(int n, int fd)
 {
-	unsigned int 	unb;
+	unsigned int	unb;
 	char			sign_len;
 
 	sign_len = 0;
@@ -46,10 +46,10 @@ int		printDecimalBase(int n, int fd)
 	{
 		unb = n;
 	}
-	return (printNum(unb,fd) + sign_len);
+	return (printNum(unb, fd) + sign_len);
 }
 
-int		printUnsignedDecimal(unsigned int n, int fd)
+int	printUnsignedDecimal(unsigned int n, int fd)
 {
-	return (printNum(n ,fd));
+	return (printNum(n, fd));
 }
