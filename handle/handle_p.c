@@ -6,21 +6,19 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:40 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 03:29:42 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 03:45:36 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <printHexBase.h>
 #include <ft_printf.h>
-#include "../includes/printHexBase.h"
-#include "../includes/ft_printf.h"
 
-int		handle_p(t_formatData* data)
+int	handle_p(t_formatData	*data)
 {
-	void*	ptr;
-	int				printed_num;
+	void	*ptr;
+	int		printed_num;
 
-	ptr = va_arg(data->ap, void*);
+	ptr = va_arg(data->ap, void *);
 	printed_num = printAddress(ptr);
 	return (printed_num);
 }
