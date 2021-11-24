@@ -6,14 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 12:59:54 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/21 15:30:51 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 03:27:59 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/printHexBase.h"
-# include "../includes/ft_printf.h"
+#include <printHexBase.h>
+#include <ft_printf.h>
 
-int		handle_lower_x(t_formatData* data)
+int	handle_lower_x(t_formatData	*data)
 {
 	unsigned int	ui;
 	int				printed_num;
@@ -22,13 +22,3 @@ int		handle_lower_x(t_formatData* data)
 	printed_num = printHexBase(ui, PHEX_LOWERCASE);
 	return (printed_num);
 }
-
-/*
-int		print_unsigned_int_hex(unsigned int decimal)
-{
-	int		printed_num;
-
-	printed_num = printHexBase(decimal, _PHEX_LOWERCASE);
-	return (printed_num);
-}
-*/

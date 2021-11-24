@@ -6,15 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/24 01:47:40 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 03:35:00 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/printHexBase.h"
-# include "../includes/ft_printf.h"
+#include <printHexBase.h>
+#include <ft_printf.h>
 
-
-int		handle_large_x(t_formatData* data)
+int	handle_large_x(t_formatData	*data)
 {
 	unsigned int	ui;
 	int				printed_num;
