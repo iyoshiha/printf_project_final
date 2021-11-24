@@ -6,7 +6,7 @@
 #    By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 13:00:37 by iyoshiha          #+#    #+#              #
-#    Updated: 2021/11/25 04:18:40 by iyoshiha         ###   ########.fr        #
+#    Updated: 2021/11/25 05:50:17 by iyoshiha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,4 +56,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: 
+	echo -e "############\nI havent done yet!!!\n###########"
+
+.PHONY: all clean fclean re bonus
