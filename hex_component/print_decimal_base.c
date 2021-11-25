@@ -13,7 +13,7 @@
 #include <libft.h>
 #include <print_hex_base.h>
 
-static	int	printNum(unsigned int unb, int fd)
+static	int	print_num(unsigned int unb, int fd)
 {
 	int	printed_num;
 
@@ -24,7 +24,7 @@ static	int	printNum(unsigned int unb, int fd)
 		printed_num += 1;
 		return (printed_num);
 	}
-	printed_num = printNum(unb / 10, fd);
+	printed_num = print_num(unb / 10, fd);
 	ft_putchar_fd('0' + unb % 10, fd);
 	printed_num += 1;
 	return (printed_num);
@@ -46,10 +46,10 @@ int	print_decimal_base(int n, int fd)
 	{
 		unb = n;
 	}
-	return (printNum(unb, fd) + sign_len);
+	return (print_num(unb, fd) + sign_len);
 }
 
 int	print_unsigned_decimal(unsigned int n, int fd)
 {
-	return (printNum(n, fd));
+	return (print_num(n, fd));
 }
