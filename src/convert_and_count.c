@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 05:50:26 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 12:51:46 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:54:18 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	convert_and_count(t_format_data *data)
 {
 	int	ret;
 
+	ret = 0;
 	if ((data->format[data->format_i]) == ('c'))
 		ret = handle_c(data);
 	else if ((data->format[data->format_i]) == ('s'))

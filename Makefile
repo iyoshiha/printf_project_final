@@ -6,7 +6,7 @@
 #    By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 13:00:37 by iyoshiha          #+#    #+#              #
-#    Updated: 2021/11/25 05:50:17 by iyoshiha         ###   ########.fr        #
+#    Updated: 2021/11/25 12:55:10 by iyoshiha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC_O	=	$(SRC:.c=.o)
 CONV	= 	handle_d.c handle_i.c handle_large_x.c handle_low_x.c handle_p.c \
 			handle_c.c handle_pct.c handle_s.c handle_u.c
 CONV_O	=	$(CONV:.c=.o)
-HEX		=	printAddress.c printDecimalBase.c printHexBase.c
+HEX		=	print_address.c print_decimal_base.c print_hex_base.c
 HEX_O	=	$(HEX:.c=.o)
 OBJECTS =	$(LIBFT_O) $(SRC_O) $(CONV_O) $(HEX_O)
 VPATH	= 	hex_component handle libft src
@@ -56,7 +56,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: 
+bonus:
 	echo -e "############\nI havent done yet!!!\n###########"
 
 .PHONY: all clean fclean re bonus
