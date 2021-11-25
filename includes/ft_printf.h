@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:39:14 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 12:38:11 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 13:59:48 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include "libft.h"
 # define ERROR -1
+# define LEN_OF_NULL 6
 
 typedef struct s_format_data
 {

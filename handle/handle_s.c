@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:43 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 12:51:47 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:05:24 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ int	handle_s(t_format_data	*data)
 	int		printed_num;
 
 	str = va_arg(data->ap, char *);
+	if (str == NULL)
+	{
+		ft_putstr_fd("(null)", STDOUT_FILENO);
+		return (printed_num = LEN_OF_NULL);
+	}
 	ft_putstr_fd(str, STDOUT_FILENO);
 	printed_num = ft_strlen(str);
 	return (printed_num);

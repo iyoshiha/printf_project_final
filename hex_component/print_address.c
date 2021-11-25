@@ -17,10 +17,10 @@ int	print_address(void	*ptr)
 {
 	int	total_num_printed;
 
-	if (ptr == 0)
-		return (print0 ());
 	ft_putstr_fd("0x", STDOUT_FILENO);
 	total_num_printed = PHEX_LEN_OF_0X;
+	if (ptr == 0)
+		return (total_num_printed += print0());
 	total_num_printed += \
 		print_hex_base((long long unsigned int)ptr, PHEX_LOWERCASE);
 	return (total_num_printed);
