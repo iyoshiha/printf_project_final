@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printAddress.c                                     :+:      :+:    :+:   */
+/*   print_address.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <printHexBase.h>
+#include <print_hex_base.h>
 
-int	printAddress(void	*ptr)
+int	print_address(void	*ptr)
 {
 	int	total_num_printed;
 
@@ -22,7 +22,7 @@ int	printAddress(void	*ptr)
 	ft_putstr_fd("0x", STDOUT_FILENO);
 	total_num_printed = PHEX_LEN_OF_0X;
 	total_num_printed += \
-		printHexBase((long long unsigned int)ptr, PHEX_LOWERCASE);
+		print_hex_base((long long unsigned int)ptr, PHEX_LOWERCASE);
 	return (total_num_printed);
 }
 

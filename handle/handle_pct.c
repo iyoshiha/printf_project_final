@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   handle_%.c                                         :+:      :+:    :+:   */
+/*   handle_pct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 15:46:09 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 03:39:51 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:51:55 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printHexBase.h>
+#include <print_hex_base.h>
 #include <ft_printf.h>
 
-int	handle_pct(t_formatData *data)
+int	handle_pct(t_format_data *data)
 {
 	int		printed_num;
 

@@ -6,19 +6,19 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:49 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 03:42:04 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:51:48 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printHexBase.h>
+#include <print_hex_base.h>
 #include <ft_printf.h>
 
-int	handle_large_x(t_formatData	*data)
+int	handle_large_x(t_format_data	*data)
 {
 	unsigned int	ui;
 	int				printed_num;
 
 	ui = va_arg(data->ap, unsigned int);
-	printed_num = printHexBase(ui, PHEX_CAPITAL);
+	printed_num = print_hex_base(ui, PHEX_CAPITAL);
 	return (printed_num);
 }

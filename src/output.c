@@ -6,14 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 04:22:12 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 03:01:42 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:45:42 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-#include "../includes/libft.h"
+#include <ft_printf.h>
+#include <libft.h>
 
-void	outputAndCount(t_formatData	*data)
+void	output_and_count(t_format_data	*data)
 {
 	data->format_i = 0;
 	while (data->format[data->format_i] != '\0')
@@ -21,7 +21,7 @@ void	outputAndCount(t_formatData	*data)
 		if (data->format[data->format_i] == '%')
 		{
 			data->format_i++;
-			data->printed_len += convertAndCount(data);
+			data->printed_len += convert_and_count(data);
 		}
 		else
 		{

@@ -6,35 +6,35 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 05:50:26 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 02:58:41 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:51:46 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 #include "../includes/handle.h"
-#include "../includes/printHexBase.h"
+#include "../includes/print_hex_base.h"
 
-int	convertAndCount(t_formatData *data)
+int	convert_and_count(t_format_data *data)
 {
 	int	ret;
 
 	if ((data->format[data->format_i]) == ('c'))
 		ret = handle_c(data);
-	if ((data->format[data->format_i]) == ('s'))
+	else if ((data->format[data->format_i]) == ('s'))
 		ret = handle_s(data);
-	if ((data->format[data->format_i]) == ('p'))
+	else if ((data->format[data->format_i]) == ('p'))
 		ret = handle_p(data);
-	if ((data->format[data->format_i]) == ('d'))
+	else if ((data->format[data->format_i]) == ('d'))
 		ret = handle_d(data);
-	if ((data->format[data->format_i]) == ('i'))
+	else if ((data->format[data->format_i]) == ('i'))
 		ret = handle_i(data);
-	if ((data->format[data->format_i]) == ('u'))
+	else if ((data->format[data->format_i]) == ('u'))
 		ret = handle_u(data);
-	if ((data->format[data->format_i]) == ('x'))
+	else if ((data->format[data->format_i]) == ('x'))
 		ret = handle_lower_x(data);
-	if ((data->format[data->format_i]) == ('X'))
+	else if ((data->format[data->format_i]) == ('X'))
 		ret = handle_large_x(data);
-	if ((data->format[data->format_i]) == ('%'))
+	else if ((data->format[data->format_i]) == ('%'))
 		ret = handle_pct(data);
 	return (ret);
 }

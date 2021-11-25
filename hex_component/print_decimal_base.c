@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printDecimalBase.c                                 :+:      :+:    :+:   */
+/*   print_decimal_base.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <printHexBase.h>
+#include <print_hex_base.h>
 
 static	int	printNum(unsigned int unb, int fd)
 {
@@ -30,7 +30,7 @@ static	int	printNum(unsigned int unb, int fd)
 	return (printed_num);
 }
 
-int	printDecimalBase(int n, int fd)
+int	print_decimal_base(int n, int fd)
 {
 	unsigned int	unb;
 	char			sign_len;
@@ -49,7 +49,7 @@ int	printDecimalBase(int n, int fd)
 	return (printNum(unb, fd) + sign_len);
 }
 
-int	printUnsignedDecimal(unsigned int n, int fd)
+int	print_unsigned_decimal(unsigned int n, int fd)
 {
 	return (printNum(n, fd));
 }

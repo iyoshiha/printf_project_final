@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printHexBase.c                                     :+:      :+:    :+:   */
+/*   print_hex_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <printHexBase.h>
+#include <print_hex_base.h>
 
-int	printHexBase(long long unsigned int	decimal, char	flag)
+int	print_hex_base(long long unsigned int	decimal, char	flag)
 {
 	long long unsigned int	next_digit;
 	int						remainder;
@@ -24,7 +24,7 @@ int	printHexBase(long long unsigned int	decimal, char	flag)
 		return (print0());
 	next_digit = decimal / 16;
 	if (next_digit > 0)
-		printed_num += printHexBase(next_digit, flag);
+		printed_num += print_hex_base(next_digit, flag);
 	remainder = decimal % 16;
 	if (remainder >= 10)
 		if (flag == 1)

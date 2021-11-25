@@ -6,14 +6,14 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:06:43 by iyoshiha          #+#    #+#             */
-/*   Updated: 2021/11/25 03:47:27 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:51:47 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printHexBase.h>
+#include <print_hex_base.h>
 #include <ft_printf.h>
 
-int	handle_s(t_formatData	*data)
+int	handle_s(t_format_data	*data)
 {
 	char	*str;
 	int		printed_num;
